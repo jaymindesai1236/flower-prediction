@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flower Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>Flower Prediction</h1>
+
+<form action="{{ url_for('predict') }}" method="post">
+
+<input type="text" name="Sepal_Length" placeholder="Sepal Length">
+
+<input type="text" name="Sepal_Width" placeholder="Sepal Width">
+
+<input type="text" name="Petal_Length" placeholder="Petal Length">
+
+<input type="text" name="Petal_Width" placeholder="Petal Width">
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h2>{{ prediction_text }}</h2>
+
+</body>
+</html>
